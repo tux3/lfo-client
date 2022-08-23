@@ -3,6 +3,25 @@ name = "lfo-client"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+crowdstrike-cloudproto = "0.2.0"
+axum = { version = "0.5.15" }
+axum-server = { version = "0.4.2", features = ["tls-rustls"] }
+tokio = { version = "1", features = ["full"] }
+tokio-rustls = { version = "0.23.4", features = [] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+rustls = "0.20.6"
+rustls-pemfile = "1.0.1"
+anyhow = "1.0.62"
+tower-http = { version = "0.3.4", features = ["trace"] }
+byteorder = "1.4.3"
+webpki-roots = "0.22"
+num-traits = "0.2.15"
+strum = "0.24"
+strum_macros = "0.24"
+hex = "0.4.3"
+crc32fast = "1.3.2"
+clap = { version = "3.2.17", features = ["derive"] }
+lzma-rs = "0.2.0"
+sha2 = "0.10.2"
