@@ -76,7 +76,7 @@ async fn lfo_tls_connect(host: &str, port: u16) -> Result<TlsStream<TcpStream>> 
 async fn main() -> Result<()> {
     tracing_subscriber::registry()
         .with(tracing_subscriber::EnvFilter::new(
-            std::env::var("RUST_LOG").unwrap_or_else(|_| "lfo_client=debug,rustls=debug".into()),
+            std::env::var("RUST_LOG").unwrap_or_else(|_| "lfo_client=debug,info".into()),
         ))
         .with(tracing_subscriber::fmt::layer())
         .init();
