@@ -1,3 +1,5 @@
+#![forbid(unsafe_code)]
+
 mod tls;
 use crate::tls::make_tls_config;
 use anyhow::Result;
