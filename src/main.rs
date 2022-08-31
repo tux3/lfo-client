@@ -30,7 +30,9 @@ struct Args {
 
 #[derive(clap::Subcommand)]
 enum Command {
+    /// Download a file from an LFO server
     Download(Download),
+    /// Parse a "channel file" and try to show any download records inside
     ParseChannel { path: String },
 }
 
